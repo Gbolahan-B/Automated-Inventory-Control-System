@@ -1,7 +1,7 @@
 {
       "homepage": "https://your-username.github.io/Automated-Inventory-Control-System",
       
-      "name": "Automated Inventory Control System",
+      "name": "automated-inventory-control-system",
       "version": "0.1.0",
       "private": true,
       "dependencies": {
