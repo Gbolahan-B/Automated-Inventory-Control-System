@@ -59,5 +59,5 @@
       port: 3000,
       open: true,
     },
-    base: '/Automated-Inventory-Control-System/',
+    base: './',  // 👈 correct for Vercel
   });
