@@ -1,0 +1,297 @@
+/* Remove custom variant - not compatible with all environments */
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.095 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.85 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.65 0.141 25.723);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --input-background: oklch(0.205 0 0);
+  --switch-background: oklch(0.35 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+/* Standard Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in srgb, var(--ring) 50%, transparent);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Add missing text size variables */
+:root {
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+}
+
+/* Base typography */
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Essential utility classes for theme colors */
+.bg-background { background-color: var(--background); }
+.bg-foreground { background-color: var(--foreground); }
+.bg-card { background-color: var(--card); }
+.bg-card-foreground { background-color: var(--card-foreground); }
+.bg-popover { background-color: var(--popover); }
+.bg-popover-foreground { background-color: var(--popover-foreground); }
+.bg-primary { background-color: var(--primary); }
+.bg-primary-foreground { background-color: var(--primary-foreground); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-secondary-foreground { background-color: var(--secondary-foreground); }
+.bg-muted { background-color: var(--muted); }
+.bg-muted-foreground { background-color: var(--muted-foreground); }
+.bg-accent { background-color: var(--accent); }
+.bg-accent-foreground { background-color: var(--accent-foreground); }
+.bg-destructive { background-color: var(--destructive); }
+.bg-destructive-foreground { background-color: var(--destructive-foreground); }
+
+.text-background { color: var(--background); }
+.text-foreground { color: var(--foreground); }
+.text-card { color: var(--card); }
+.text-card-foreground { color: var(--card-foreground); }
+.text-popover { color: var(--popover); }
+.text-popover-foreground { color: var(--popover-foreground); }
+.text-primary { color: var(--primary); }
+.text-primary-foreground { color: var(--primary-foreground); }
+.text-secondary { color: var(--secondary); }
+.text-secondary-foreground { color: var(--secondary-foreground); }
+.text-muted { color: var(--muted); }
+.text-muted-foreground { color: var(--muted-foreground); }
+.text-accent { color: var(--accent); }
+.text-accent-foreground { color: var(--accent-foreground); }
+.text-destructive { color: var(--destructive); }
+.text-destructive-foreground { color: var(--destructive-foreground); }
+
+.border-border { border-color: var(--border); }
+.border-input { border-color: var(--input); }
+.border-ring { border-color: var(--ring); }
+.border-foreground { border-color: var(--foreground); }
+.border-primary { border-color: var(--primary); }
+.border-secondary { border-color: var(--secondary); }
+.border-destructive { border-color: var(--destructive); }
+.border-muted { border-color: var(--muted); }
+.border-accent { border-color: var(--accent); }
+
+/* Hover states */
+.hover\:bg-accent:hover { background-color: var(--accent); }
+.hover\:bg-muted:hover { background-color: var(--muted); }
+
+/* Enhanced dark mode text readability */
+.dark .text-gray-600 { color: oklch(0.85 0 0) !important; }
+.dark .text-gray-500 { color: oklch(0.8 0 0) !important; }
+.dark .text-gray-400 { color: oklch(0.75 0 0) !important; }
+.dark .text-gray-300 { color: oklch(0.9 0 0) !important; }
+.dark .text-red-600 { color: oklch(0.75 0.15 25) !important; }
+.dark .text-red-800 { color: oklch(0.9 0.15 25) !important; }
+.dark .text-green-600 { color: oklch(0.8 0.15 145) !important; }
+.dark .text-green-800 { color: oklch(0.9 0.15 145) !important; }
+.dark .text-blue-600 { color: oklch(0.75 0.15 250) !important; }
+.dark .text-blue-700 { color: oklch(0.8 0.15 250) !important; }
+.dark .text-blue-900 { color: oklch(0.9 0.15 250) !important; }
+
+/* Ensure table text is readable */
+.dark table th { color: var(--foreground) !important; }
+.dark table td { color: var(--foreground) !important; }
+.dark .text-muted-foreground { color: oklch(0.9 0 0) !important; }
+
+/* Improve small text readability */
+.dark .text-sm { color: oklch(0.9 0 0) !important; }
+.dark .text-xs { color: oklch(0.85 0 0) !important; }
+
+/* Better contrast for tiny text elements */
+.dark .font-mono { color: oklch(0.85 0 0) !important; }
+
+/* Export info card improvements for dark mode */
+.dark .bg-blue-50 { background-color: oklch(0.25 0.08 250) !important; }
+.dark .bg-blue-100 { background-color: oklch(0.3 0.1 250) !important; }
+.dark .border-blue-200 { border-color: oklch(0.4 0.12 250) !important; }
+.dark .text-blue-700 { color: oklch(0.8 0.15 250) !important; }
+.dark .text-blue-600 { color: oklch(0.75 0.15 250) !important; }
+
+/* Ensure badges and status indicators are visible */
+.dark .bg-green-100 { background-color: oklch(0.3 0.1 145) !important; }
+.dark .text-green-800 { color: oklch(0.9 0.15 145) !important; }
+
+/* Card content and descriptions */
+.dark .text-gray-600 { color: oklch(0.85 0 0) !important; }
+
+/* Ensure all small informational text is visible */
+.dark p.text-sm { color: oklch(0.9 0 0) !important; }
+.dark span.text-xs { color: oklch(0.85 0 0) !important; }
+.dark div.text-xs { color: oklch(0.85 0 0) !important; }
+
+/* Form elements in dark mode */
+.dark input::placeholder { color: oklch(0.6 0 0); }
+.dark textarea::placeholder { color: oklch(0.6 0 0); }
+
+/* Alert and notification improvements */
+.dark .bg-green-50 { background-color: oklch(0.25 0.08 145) !important; }
+.dark .bg-green-100 { background-color: oklch(0.3 0.1 145) !important; }
+.dark .border-green-200 { border-color: oklch(0.4 0.12 145) !important; }
+.dark .text-green-800 { color: oklch(0.85 0.15 145) !important; }
+
+.dark .bg-red-50 { background-color: oklch(0.25 0.08 25) !important; }
+.dark .bg-red-100 { background-color: oklch(0.3 0.1 25) !important; }
+.dark .border-red-200 { border-color: oklch(0.4 0.12 25) !important; }
+.dark .border-red-300 { border-color: oklch(0.45 0.12 25) !important; }
+.dark .text-red-800 { color: oklch(0.85 0.15 25) !important; }
+
+/* Enhanced contrast for small text */
+.dark .text-sm { color: oklch(0.9 0 0); }
+.dark .text-xs { color: oklch(0.85 0 0); }
+
+/* Loading spinner contrast */
+.dark .border-primary { border-color: oklch(0.8 0 0); }
+
+/* QR code placeholder and similar elements */
+.dark .border-gray-400 { border-color: oklch(0.6 0 0) !important; }
+.dark .bg-white { background-color: oklch(0.2 0 0) !important; }
+
+/* Card titles and important text */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--foreground);
+}
+
+/* Ensure button text is always readable */
+.dark button { color: inherit; }
+.dark .bg-primary { color: var(--primary-foreground); }
+
+/* Better text contrast for navigation and buttons */
+.dark .hover\:text-accent-foreground:hover { color: var(--accent-foreground) !important; }
